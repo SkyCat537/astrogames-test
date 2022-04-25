@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" 
+    integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" 
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+                        <!--=========== Dies ist di Uhr ===========-->
+                        <div class="clock">
+                            <div class="time"></div>
+                            <div class="date-time"></div>
+                          </div>
+                        
+                          <script>
+                            var time = document.querySelector('.time');
+                            var dateTime = document.querySelector('.date-time');
+                        
+                            function updateClock() {
+                              
+                              var now = new Date();
+                              var hours = now.getHours();
+                              var minutes = now.getMinutes();
+                              var seconds = now.getSeconds();
+                              var day = now.getDay();
+                              var date = now.getDate();
+                              var month = now.getMonth();
+                              var year = now.getFullYear();
+                        
+                              
+                              var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                              var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                        
+                              
+                              hours = hours % 12 || 12;
+                              minutes = minutes < 10 ? '0' + minutes : minutes;
+                              seconds = seconds < 10 ? '0' + seconds : seconds;
+                              date = date < 10 ? '0' + date : date;
+                        
+                              
+                              var period = hours < 12 ? 'AM' : 'PM';
+                              time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + period;
+                              dateTime.innerHTML = dayNames[day] + ', ' + monthNames[month] + ' ' + date + ', ' + year;
+                            }
+                        
+                            updateClock();
+                            setInterval(updateClock, 1000);
+                          </script>
+                        <!--=========== Dies ist di Uhr ===========-->
+        
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"><i class="fas fa-gem" style="text-shadow: 0 0 10px violet, 0 0 20px magenta, 0 0 30px; opacity: 100%;"></i>Astro Games</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="https://forms.gle/QMxQc4mvjYmCGkW87" class="navbar__links">Bewerben</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Neuigkeiten</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/" class="button">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="main">
+        <div class="main__containor">
+            <div class="main__content">
+                <br>
+                <h1 style="text-align: center;">ASTRO GAMES</h1>
+                <h2 style="text-align: center;">TECHNOLOGY</h2>
+                <p style="text-align: center;">See what makes us diffrent.</p>
+                <button class="main__btn"><a href="/">Get Starded</a></button>
+            </div>
+            <div class="main__img--container">
+                <br>
+                <br>
+                <img src="images/globe.gif" alt="globe gif" id="main__img">
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services">
+        <br>
+        <br>
+        <br>
+        <h1>Suche eine der Kategorien aus!</h1>
+        <br>
+        <br>
+        <div class="services__container">
+            <div class="services__card">
+                <h2>Bewerben</h2>
+                <p>Bewirb dich noch heute bei Astro Games!</p>
+                <button><a href='https://forms.gle/QMxQc4mvjYmCGkW87' alt='Bewerbung' style="text-decoration: none; color: #fff;">Bewerben</a></button>
+            </div>
+            <div class="services__card">
+                <h2>Neuigkeiten</h2>
+                <p>Sieh die Neuigkeiten hier!</p>
+                <button><a href='/' alt='Neuigkeiten' style="text-decoration: none; color: #fff;">Neuigkeiten</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fooder Section -->
+        <div class="fooder__container">
+            <div class="fooder__links">
+                <div class="footer__links--wrapper">
+                    <div class="footer__link--items">
+                        <h2>About Us</h2>
+                        <a href="/">Home</a>
+                        <a href="/">News</a>
+                        <a href="/">Server</a>
+                        <a href="/">Terms of Service</a>
+                    </div>
+                </div>
+                <div class="footer__links--wrapper">
+                    <div class="footer__link--items">
+                        <h2>Contact Us</h2>
+                        <a href="https://discord.gg/zpqsrxqX7Y">Discord</a>
+                        <a href="https://twitter.com/ki3rit0">Twitter</a>
+                        <a href="https://www.instagram.com/ki3rit0/">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="social__media">
+                <div class="social__media--wrap">
+                    <div class="footer__logo">
+                        <a href="/" id="footer__logo"><i class="fas fa-gem" style="text-shadow: 0 0 10px magenta, 0 0 20px magenta, 0 0 30px;"></i>Astro Games</a>
+                    </div>
+                    <p class="website__rights">© Astro Games 2022. All rights reserved</p>
+                    <br>
+                    <p style="color: violet;">Made with ❤ by Daniel</p>
+                </div>
+            </div>
+        </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+   
