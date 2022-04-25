@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <title style="text-align: center; color: darkviolet;">AstroGames</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--[if lt IE 9]>
+        <script>
+            document.createElement("article");
+            document.createElement("aside");
+            document.createElement("footer");
+            document.createElement("header");
+            document.createElement("main");
+            document.createElement("nav");
+            document.createElement("selection");
+        </script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <header class="banner">
+            <h1>🌍 AstroGames 🌍</h1>
+            <div class="container">
+                <h1 style="color: whitesmoke;">Neuigkeiten <span class="auto-type"></span></h1>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+            <script>
+                var typed = new Typed(".auto-type", {
+                    strings: ["zum Discord!", "zum PServer!", "zu den Events!"],
+                    typeSpeed: 100,
+                    backSpeed: 100,
+                    loop: true
+                })
+
+            </script>
+            <br>
+            <img src="globe_slow.gif" alt="data gif"  width="200" />
+            <br>
+        </header>
+        <header class="uhr"> 
+            <!--=========== Dies ist di Uhr ===========-->
+            <div class="clock">
+                <div class="time"></div>
+                <div class="date-time"></div>
+              </div>
+            
+              <script>
+                var time = document.querySelector('.time');
+                var dateTime = document.querySelector('.date-time');
+            
+                function updateClock() {
+                  
+                  var now = new Date();
+                  var hours = now.getHours();
+                  var minutes = now.getMinutes();
+                  var seconds = now.getSeconds();
+                  var day = now.getDay();
+                  var date = now.getDate();
+                  var month = now.getMonth();
+                  var year = now.getFullYear();
+            
+                  
+                  var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                  var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            
+                  
+                  hours = hours % 12 || 12;
+                  minutes = minutes < 10 ? '0' + minutes : minutes;
+                  seconds = seconds < 10 ? '0' + seconds : seconds;
+                  date = date < 10 ? '0' + date : date;
+            
+                  
+                  var period = hours < 12 ? 'AM' : 'PM';
+                  time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + period;
+                  dateTime.innerHTML = dayNames[day] + ', ' + monthNames[month] + ' ' + date + ', ' + year;
+                }
+            
+                updateClock();
+                setInterval(updateClock, 1000);
+              </script>
+            <!--=========== Dies ist di Uhr ===========-->
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="http://astrogamesmain.c1.biz/">Main Webseite</a></li>
+                <li><a href="http://astrogames.c1.biz/">Neuigkeiten</a></li>
+                <li><a href="http://astrogamesabout.c1.biz/">about</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h1>Infos zu Better Neruxvace!</h1>
+                <article>
+                    <header>
+                        <h3 style="color: crimson; font-weight: bold;">Neue Minecraft Lobby auf Better Neruxvace</h3>
+                        <p>(System, 23.04.22)</p>
+                        <br>
+                    </header>
+                    <p>Das AstroGames Team hat sich beschlossen die Lobby von Better Neruxvace weiter auszubauen.</p>
+                    <p>Die Aktion wurde vom builder ki3rit0 durchgeführt und abgeschlossen. Weiter veränderungen sind bald zu erkennen!</p>
+                </article>
+
+                <article>
+                    <header>
+                        <h3 style="color: crimson;">SkyPvp - News</h3>
+                        <p>(System, 23.04.22)</p>
+                        <br>
+                    </header>
+                    <p>Wir haben die Maps die aus einem Spawn und einer Pvp Arena besteht fertig gestellt, kleine Veränderungen werden im Laufe der Zeit vorgenommen </p>
+                    <p>Das Developer Team das aus Keks_LP1 besteht kümmert sich um die mechaniken und Featurs in Skypvp.</p>
+                    <br>
+                    <img src="skypvp_23.04.22.png" alt="Skypvp Image" height="380" width="600">
+                </article>
+            </section>
+            <section>
+                <h2>Lobby - Better Neruxvace</h2>
+                <article>
+                    <header>
+                        <h3 style="color: crimson;">Neues Lobby System</h3>
+                        <p>(System, 23.04.22)</p>
+                        <br>
+                    </header>
+                    <p>Der Developer Keks_LP1 hat am 23.04.22 Das Lobby-system überarbeitet und verbessert. Man kann nun seine Daily Belohnung abholen.</p>
+                    <p>Es wurden Neue Kategorien bei den Addons diese sind : Pets, Cosmetics, Ranks. Diese können mit Ingame "Cookies" erworben werden!</p>
+                    <br>
+                    <img src="lobby_nav.png" alt="Lobby Navigator Image" height="520" width="450">
+                </article>
+
+                <article>
+                    <header>
+                        <h3 style="color: crimson;">Neue Modie</h3>
+                        <p>(System, 23.04.22)</p>
+                        <br>
+                    </header>
+                    <p>Wir haben uns entschlossen als ersten Modus Skypvp zu machen. Die Nachvolgenden modi werden Infinity woolBattle und FFA sein.</p>
+                    <p>Weitere Modi werden bald volgen.</p>
+                </article>
+            </section>
+        </main>
+
+        <aside>
+            <h2>Discord</h2>
+            <p>Wenn du Ideen hast - Schreib uns!</p>
+            <br>
+            <p>Klick auf das Discord Icon, um zum Discord zu kommen!</p>
+            <br>
+            <a href="https://discord.gg/zpqsrxqX7Y">
+            <img src="discord.png" alt="Discord Icon" height="80" width="80">
+            </a>
+            <br>
+            <br>
+            <h2>Unsere Subdomain</h2>
+            <br>
+            <p>BetterNerux.Neruxvace.Cloud</p>
+        </aside>
+
+        <footer>
+            <p style="text-align: center;">Made with ❤ by Daniel</p>
+        </footer>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>

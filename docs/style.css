@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+article, aside, footer, header, main, nav, section {
+    display: block;
+}
+
+html, body, h1, h2, h3, ul, li, a, p,
+article, aside, footer, header, main, nav, section {
+    padding: 0;
+    margin: 0;
+}
+
+.banner {
+    background-color: #11233b;
+    color: violet;
+    padding: 10px 20px;
+    text-align: center;
+}
+.uhr {
+    background-color: #11233b;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+body {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(Background_planet.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+nav {
+    background-color: #20416c;
+    padding: 5px;
+    margin-top: 1px;
+}
+
+li a {
+    color: white;
+}
+
+li {
+    display: inline;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+section {
+    background-color: #bbbb;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+article {
+    background-color: white;
+    margin-top: 5px;
+    padding: 15px 15px;
+}
+
+main {
+    width: 640px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+aside {
+    background-color: #20416c;
+    color: #fff;
+    width: 270px;
+    float: right;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    clear: both;
+    background-color: #20416c;
+    color: white;
+    padding: 15px 40px;
+}
+
+.container {
+    width: 100%;
+    height: 1vh;
+    color: #fff;
+}
+
+.container h1{
+    font-size: 20px;
+    font-weight: 500px;
+}
+span{
+    color: crimson;
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #63d616 0%,
+    #11a755 29%,
+    #13ff9d 67%,
+    #12dfee 100%
+  );
+  font-size: 20px;
+  text-align: center;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  font-weight: bold;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 45s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 150% center;
+  }
+}
+
+.time {
+    font-weight: bold;
+    color: violet;
+}
+
+.date-time{
+    font-weight: bold;
+}
+
